@@ -12,7 +12,8 @@ programa {
         contagem++
       }
     } enquanto (nota != -1)
-    media - somaNotas / contagem
+    media = somaNotas / contagem
 
     escreva("Média das notas: ", media)
+  }
 }
