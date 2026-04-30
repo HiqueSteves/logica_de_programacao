@@ -9,7 +9,12 @@ programa {
       escreva("Digite um número (0 para parar): ")
       leia(numero)
 
+      se (numero != 0) {
       qtd = qtd + 1
+
+      }
+
+
     }
 
     escreva("Quantidade =", qtd)
