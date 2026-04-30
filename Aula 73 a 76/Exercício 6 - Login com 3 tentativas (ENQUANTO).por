@@ -12,6 +12,7 @@ programa {
 
       se (senha == "1234") {
         escreva("Acesso liberado!\n")
+        pare
       }
 
     }
