@@ -33,3 +33,7 @@ INSERT INTO clientes (id_cliente, nome, email, cidade, idade, genero) VALUES
 (19, 'Tatiane Moraes', 'tatiane.moraes@gmail.com', 'Florianópolis', 29, 'F'),
 (20, 'Vinícius Teixeira', 'vinicius.teixeira@gmail.com', 'Goiânia', 27, 'M');
 
+set sql_safe_updates = 0;
+
+
+
