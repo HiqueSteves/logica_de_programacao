@@ -3,7 +3,7 @@ create database locadora;
 use locadora;
 
 create table clientes (
-	id_cliente INT,
+	id_cliente INT PRIMARY KEY,
     nome_cliente VARCHAR(45),
     estado VARCHAR(45),
     regiao VARCHAR(45),
@@ -13,7 +13,7 @@ create table clientes (
     );
     
 create table filmes (
-	id_filme INT,
+	id_filme INT PRIMARY KEY,
     titulo VARCHAR(60),
     genero VARCHAR(45),
     duracao VARCHAR(45),
@@ -22,7 +22,7 @@ create table filmes (
     );
     
 create table atores (
-	id_ator INT,
+	id_ator INT PRIMARY KEY,
     nome_ator VARCHAR(60),
     ano_nascimento DATE,
     nacionalidade VARCHAR(20),
