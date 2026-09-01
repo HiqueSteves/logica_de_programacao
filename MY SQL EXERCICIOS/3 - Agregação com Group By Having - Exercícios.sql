@@ -8,22 +8,23 @@ select id_cliente, count(*) as quantidade_alugueis from alugueis group by id_cli
 select genero, round(avg(preco_aluguel),2) as media_preco from filmes group by genero having media_preco > 2.50;
 
 -- EXERCÍCIO 4: anos com mais de 4 filmes cadastrados
-select ano_lancamento, count(ano_lancamento) as filmes_cadastrados from filmes group by ano_lancamento having filmes_cadastrados;
+select ano_lancamento, count(ano_lancamento) as filmes_cadastrados from filmes group by ano_lancamento having filmes_cadastrados > 4;
 
 -- EXERCÍCIO 5: atores que atuaram em mais de 1 filme
-select 
+select id_ator, count(*) as total_filmes from atuacoes group by id_ator having total_filmes > 1;
 
 -- EXERCÍCIO 6: estados com mais de 6 clientes
-
+select estado, count(estado) as quantidade_clientes from clientes group by estado having quantidade_clientes > 6;
 
 -- EXERCÍCIO 7: filmes com média de nota maior que 8
-
+select id_filme, round(avg(nota),2) as media_nota from alugueis group by id_filme having media_nota > 8;
 
 -- EXERCÍCIO 8: clientes que alugaram 2+ filmes diferentes
-
+select id_cliente, count(distinct id_filme) as quantidade_filmes_distintos from alugueis group by id_cliente having quantidade_filmes_distintos >= 2;
 
 -- EXERCÍCIO 9: anos cuja soma de duração ultrapassa 500
-
+select ano_lancamento, sum(duracao) as soma_duracao from filmes group by ano_lancamento having soma_duracao > 500;
 
 -- EXERCÍCIO 10: nacionalidades com mais de 8 atores
+select nacionalidade, count(*) as total_atores from atores group by nacionalidade having total_atores > 8;
 
